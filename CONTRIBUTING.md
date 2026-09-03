@@ -6,4 +6,5 @@
 - Je laat weten wanneer je later komt of afwezig bent
 
 # Team Canvas
-[Team canvas](https://www.figma.com/design/lpsDFW7EiSu0BmHx3ntxpF/Teamcanvas-JJL?node-id=3005-2503&t=WdCfBXe1wLwrS2jB-0) 
+<img width="845" height="602" alt="Scherm­afbeelding 2026-09-03 om 10 34 54" src="https://github.com/user-attachments/assets/e71cf124-237f-4ec5-a6c0-616aeaadb279" />
+
