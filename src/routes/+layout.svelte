@@ -57,7 +57,7 @@
 		span {
 			background-color: var(--rood);
 			color: var(--wit);
-			padding: 0.1em 0.7em 0.1em 0.7em;
+			padding: 0.1em 0.7em;
 		}
 	}
 </style>
