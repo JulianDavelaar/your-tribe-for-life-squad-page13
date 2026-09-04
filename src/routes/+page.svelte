@@ -23,22 +23,20 @@
     .grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        /* gap: 1rem; */
         list-style: none;
         padding: 0;
     }
 
     .card {
-        background-color: rgb(219, 210, 188);
-        /* border-radius: 8px; */
+        background-color: var(--creme);
         padding: 1rem;
         text-align: center;
-    }
 
-    .card img {
-        width: 100%;
-        aspect-ratio: 1 / 1;
-        object-fit: cover;
-        border-radius: 8px;
+        img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 8px;
+        }
     }
 </style>
