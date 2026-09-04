@@ -2,10 +2,41 @@
     let {data} = $props()
     const persons = data.person;
 </script>
- 
-{#each persons as person}
-    {person.name}<br>
-{/each}
 
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<h1>Squadpage</h1>
+<ul class="grid">
+    {#each persons as person}
+        <li class="card">
+            <h2>{person.name}</h2>
+            <img src={person.avatar ?? '/placeholder.jpg'} alt="{person.name}" />
+            
+        </li>
+    {/each}
+</ul>
+
+<style>
+    h1{
+        display: flex;
+        justify-self: center;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        list-style: none;
+        padding: 0;
+    }
+
+    .card {
+        background-color: var(--creme);
+        padding: 1rem;
+        text-align: center;
+
+        img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+    }
+</style>
