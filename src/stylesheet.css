@@ -1,0 +1,15 @@
+@font-face {
+    font-family: boldonse;
+}
+
+:root {
+    --rood: #870316;
+    --creme: #FBE4D6;
+    --wit: #FFFFFF;
+    --zwart: #000000;
+}
+
+body {
+    background-color: var(--creme);
+    margin: 0;
+}
