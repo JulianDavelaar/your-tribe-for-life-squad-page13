@@ -2,6 +2,8 @@
     let {data} = $props()
 </script>
 
+<svelte:head><title>{data.person.name}</title></svelte:head>
+
 <article class="parent">
 
 
@@ -33,7 +35,7 @@
 <style>
     .parent {
     display: grid;
-    grid-template-columns: 200px, 200px, auto;
+    grid-template-columns: 200px 200px auto;
     grid-column-gap: 0px;
     }
 
