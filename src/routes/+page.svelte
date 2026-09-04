@@ -11,9 +11,10 @@
 <ul class="grid">
     {#each persons as person}
         <li class="card">
-            <h4>{person.name}</h4>
-            <img src={person.avatar ?? '/placeholder.jpg'} alt="{person.name}" />
-            
+            <a href="/student/{person.id}">
+                <h4>{person.name}</h4>
+                <img src={person.avatar ?? '/placeholder.jpg'} alt="{person.name}" />
+            </a>
         </li>
     {/each}
 </ul>
