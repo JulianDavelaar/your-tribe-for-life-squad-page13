@@ -48,6 +48,7 @@
     .grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        margin: 0 3em;  
         list-style: none;
         padding: 0;
     }
@@ -61,5 +62,10 @@
             object-fit: cover;
             border-radius: 8px;
         }
+    }
+
+    a {
+        color: var(--zwart);
+        text-decoration: none;
     }
 </style>
