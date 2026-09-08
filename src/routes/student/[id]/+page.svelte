@@ -4,12 +4,12 @@
 
 <svelte:head><title>{data.person.name}</title></svelte:head>
 
-<article class="parent">
+<article>
 
 
-    <h1 class="name">{ data.person.name }</h1>
+    <h1>{ data.person.name }</h1>
 
-        <dl class="list">
+        <dl>
 
             {#if data.person.birthdate}
             <dt>Geboortedatum</dt>
@@ -25,37 +25,59 @@
             <dd>{data.person.residency}</dd>
         </dl>
 
-    <p class="bio">{data.person.bio}</p>
+        <h2>Bio</h2>
+            <p>{data.person.bio}</p>
 
-        <img class="image" src="https://fdnd.directus.app/assets/{data.person.mugshot}" alt="{data.person.name}" width="250" height="200">
+        <img class="image" src="https://fdnd.directus.app/assets/{data.person.mugshot}" alt="{data.person.name}" width="300" height="400">
 </article>
 
 
 
 <style>
-    .parent {
-    display: grid;
-    grid-template-columns: 200px 200px auto;
-    grid-column-gap: 0px;
+    article {
+        padding: 1rem;
+        max-width: 20rem;
+        margin-inline: auto;    
     }
-
-        .name { grid-area: 1 / 1 / 2 / 2; }
-        .list { grid-area: 2 / 1 / 3 / 2; }
-        .bio { grid-area: 1 / 2 / 2 / 3; }
-        .image { grid-area: 2 / 3 / 3 / 4; }    
 
     img {
-        height: 300px;
-        width: auto;
+        display: block;
+        width: 100%;
+        aspect-ratio: 3 / 4;
+        object-fit: cover;
     }
     
-    .name {
-        font-size: 3em;
+    h1 {
+		font-size: clamp(1.4rem, 9vw, 2.5rem);	
     }
 
-    .list {
-        font-size: 2em;
+    dl {
+		font-size: clamp(1rem, 5vw, 2rem);	
     }
+
+    dt {
+        font-weight: bold;
+        margin: 1rem 0 ;
+    }
+
+    dd  {
+        margin: 0 0 1.5rem;
+    }
+
+    h2 {
+    font-weight: bold;
+    font-size: clamp(1.4rem, 5vw, 2rem);	    
+    margin: 2rem 0 1rem  0;
+    }
+
+    p {
+        font-style: oblique;
+        margin: 0 0 2rem;
+        max-width: 60ch;
+    }
+
+
+
 
     
 </style>
