@@ -28,8 +28,15 @@
         margin-left: 2.7em;
     }
     h4 {
+        font-size: 1.3em;
         font-family: boldonse;
         text-transform: uppercase;
+
+        &:hover {
+            color: var(--rood);
+            border-style: none;
+        }
+
     }
     button {
         background-color: var(--rood);
