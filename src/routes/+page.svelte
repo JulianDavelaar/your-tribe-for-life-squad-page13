@@ -12,7 +12,7 @@
     {#each persons as person}
         <li class="card">
             <a href="/student/{person.id}">
-                <h4>{person.name}</h4>
+                <h4>{person.name.split(' ')[0]}</h4>
                 <img src={person.avatar ?? '/placeholder.jpg'} alt="{person.name}" />
             </a>
         </li>
