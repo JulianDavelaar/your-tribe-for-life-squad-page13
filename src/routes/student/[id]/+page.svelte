@@ -35,6 +35,7 @@
 
 <style>
     article {
+        font-family: boldonse, sans-serif ;
         padding: 1rem;
         max-width: 20rem;
         margin-inline: auto;    
