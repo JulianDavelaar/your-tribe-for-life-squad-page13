@@ -37,7 +37,7 @@
 		}
 		h1 {
 			font-family: boldonse;
-			font-size: 4em;	
+			font-size: clamp(2.4rem, 3.87vw, 7rem);	
 			text-transform: uppercase;
 			margin: 0em;
 		}
