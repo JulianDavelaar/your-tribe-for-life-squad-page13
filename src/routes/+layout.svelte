@@ -1,5 +1,6 @@
 <script>
 	import favicon from '$lib/assets/favicon.svg';
+	import { zoekstatus } from '$lib/search.svelte';
 
 	let { children } = $props();
 </script>
@@ -10,14 +11,23 @@
 
 <header>
 	<div class="header-content">
-		<section>
+		<section>	
 			<h1>Squadpage <span>FDND</span></h1>
 			<h2>Tweedejaars studenten 26/27</h2>
 		</section>
 
-		<section class="zoekbalk">
-			<h3>Zoeken...</h3>
-		</section>
+		<!-- ZOEKBALK -->
+		<div class="zoekbalk">
+			<form role="search">
+				<input
+					type="search"
+					id="zoek"
+					placeholder="Zoek op naam..."
+					bind:value={zoekstatus.term} 
+				/>
+				<!-- bind:value={zoekstatus.term} zegt tegen Svelte: "koppel de waarde van dit invoerveld direct aan mijn variabele zoekstatus.term -->
+			</form>
+		</div>
 	</div>
 
 	<hr>
@@ -29,11 +39,14 @@
 	header {
         border-bottom: 2px;
 		margin: 4em 4em 2em 4em;
-
 		.header-content {
 			display: flex;
 			justify-content: space-between;
 			align-items: flex-start;
+			@media (width < 600px) {
+				display: flex;
+				flex-direction: column;
+            }
 		}
 		h1 {
 			font-family: boldonse;
@@ -43,16 +56,22 @@
 		}
 		h2 {
 			font-family: sans-serif;
-			font-size: 1.5em;	
+			font-size: clamp(1.1rem, 2.87vw, 1.5rem);	
 			text-transform: uppercase;
 			font-weight: 400;
 			margin-bottom: 1.2em;
+			margin-top: 1em;
 		}
 		.zoekbalk {
 			font-family: sans-serif;
 			margin: 0;
 			font-weight: 400;
 			margin-bottom: 1.2em;
+			input {
+				background-color: var(--creme);
+				padding: 0.5em;
+				border-color: var(--rood);
+			}
 		}
 		span {
 			background-color: var(--rood);
