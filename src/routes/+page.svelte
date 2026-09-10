@@ -4,17 +4,27 @@
     let {data} = $props()
 
     const persons = data.person;
+    let sorteerVan = $state('az');
 
     let gefilterdePersonen = $derived(
-        persons.filter((person) =>
+        persons
+        .filter((person) =>
             person.name.toLowerCase().includes(zoekstatus.term.toLowerCase())
         )
+        .sort((a, b) =>
+            sorteerVan === 'az'
+            ? a.name.localeCompare(b.name)
+            : b.name.localeCompare(a.name)
+        )
     );
+
+    
 </script>
 
-<h3>Sorteren van 
-    <button>A-Z</button>
-    <button>Z-A</button>
+<h3>Sorteren van  
+    <!--class:actief={voorwaarde} is Svelte's ingebouwde manier om een class conditioneel toe te voegen -->
+    <button class:actief={sorteerVan === 'az'} onclick={() => sorteerVan = 'az'}>A-Z</button>
+    <button class:actief={sorteerVan === 'za'} onclick={() => sorteerVan = 'za'}>Z-A</button>
 </h3>
 
 {#if gefilterdePersonen.length === 0}
@@ -62,7 +72,20 @@
         padding: 0.5em 1em 0.5em 1em;
         border-style: none;
         font-size: 0.8em;
+        cursor: pointer;
+        transition: background-color 0.2s ease
+        
     }
+
+    button:hover {
+        background-color: var(--zwart);
+    }
+
+    button.actief {
+        background-color: var(--zwart);
+    }
+
+
     .grid {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
