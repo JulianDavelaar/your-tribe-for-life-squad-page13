@@ -12,8 +12,10 @@
 <header>
 	<div class="header-content">
 		<section>	
-			<h1>Squadpage <span>FDND</span></h1>
-			<h2>Tweedejaars studenten 26/27</h2>
+			<a href="/">
+				<h1>Squadpage <span>FDND</span></h1>
+				<h2>Tweedejaars studenten 26/27</h2>
+			</a>
 		</section>
 
 		<!-- ZOEKBALK -->
@@ -47,6 +49,10 @@
 				display: flex;
 				flex-direction: column;
             }
+		}
+		a {
+			color: var(--zwart);
+			text-decoration: none;
 		}
 		h1 {
 			font-family: boldonse;
