@@ -5,4 +5,4 @@ export async function load(){
     return {
         person: data.data
     };
-}   
+} 
