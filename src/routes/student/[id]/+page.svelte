@@ -37,11 +37,30 @@
     article {
         font-family: boldonse, sans-serif ;
         padding: 1rem;
-        max-width: 20rem;
         margin-inline: auto;    
+
+        @media (width > 750px ) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "naam biokop"
+        "lijst bio"
+        "lijst foto";
+    }
+
+        @media (width > 1150px ) {
+        display: grid;
+        grid-template-columns: 1fr  1fr 1fr;
+        grid-template-areas: 
+        "naam biokop foto"
+        "lijst bio foto"
+        "lijst bio foto";
+    }
+
     }
 
     img {
+        grid-area: foto;
         display: block;
         width: 100%;
         aspect-ratio: 3 / 4;
@@ -49,10 +68,12 @@
     }
     
     h1 {
+        grid-area: naam;
 		font-size: clamp(1.4rem, 9vw, 2.5rem);	
     }
 
     dl {
+        grid-area: lijst;
 		font-size: clamp(1rem, 5vw, 2rem);	
     }
 
@@ -62,23 +83,23 @@
     }
 
     dd  {
+        font-size:smaller;
         margin: 0 0 1.5rem;
     }
 
     h2 {
+    grid-area: biokop;
     font-weight: bold;
     font-size: clamp(1.4rem, 5vw, 2rem);	    
     margin: 2rem 0 1rem  0;
     }
 
     p {
+        grid-area: bio;
         font-style: oblique;
         margin: 0 0 2rem;
         max-width: 60ch;
     }
-
-
-
 
     
 </style>
