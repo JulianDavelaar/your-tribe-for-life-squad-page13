@@ -60,7 +60,6 @@
         font-size: 1.3em;
         font-family: boldonse;
         text-transform: uppercase;
-
         &:hover {
             color: var(--rood);
             border-style: none;
@@ -106,6 +105,25 @@
             aspect-ratio: 1 / 1;
             object-fit: cover;
             border-radius: 8px;
+
+            animation: fade-in linear;
+            animation-timeline: view();
+            animation-range: entry 0% entry 30%;
+            scroll-behavior: smooth;
+            @media(prefers-reduced-motion: reduce) {
+                animation: none;
+                opacity: 1;
+            }
+        }
+    }
+
+    /* animatie op de afbeeldingen studenten */
+    @keyframes fade-in {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
         }
     }
     a {
