@@ -73,7 +73,7 @@
         border-style: none;
         font-size: 0.8em;
         cursor: pointer;
-        transition: background-color 0.2s ease
+        transition: background-color 0.2s ease;
         
     }
 
@@ -83,6 +83,10 @@
 
     button.actief {
         background-color: var(--zwart);
+        /* horizontal-offset | vertical-offset | blur-radius | spread-radius | color */
+        box-shadow: 2px 4px 8px 2px rgba(0, 0, 0, 0.2);
+        transform: scale(1.05);
+
     }
 
 
