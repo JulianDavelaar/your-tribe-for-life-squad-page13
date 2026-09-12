@@ -1,6 +1,7 @@
 <script>
 	import favicon from '$lib/assets/favicon.svg';
 	import { zoekstatus } from '$lib/search.svelte';
+	import '../stylesheet.css';
 
 	let { children } = $props();
 </script>
