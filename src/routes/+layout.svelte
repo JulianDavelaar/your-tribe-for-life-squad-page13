@@ -40,7 +40,7 @@
 
 <style>
 	header {
-        border-bottom: 2px;
+        border-bottom: solid 2px #0000;
 		margin: 4em 4em 2em 4em;
 		.header-content {
 			display: flex;
