@@ -7,7 +7,7 @@
 <article>
 
 
-    <h1>{ data.person.name }</h1>
+    <h2>{ data.person.name }</h2>
 
         <dl>
 
@@ -15,6 +15,7 @@
             <dt>Geboortedatum</dt>
             <dd>{data.person.birthdate}</dd>
             {:else}
+            <dt>Geboortedatum</dt>
             <dd>nog niet geboren</dd>
             {/if}
 
@@ -25,10 +26,15 @@
             <dd>{data.person.residency}</dd>
         </dl>
 
-        <h2>Bio</h2>
+        <h3>Bio</h3>
             <p>{data.person.bio}</p>
 
-        <img class="image" src="https://fdnd.directus.app/assets/{data.person.mugshot}" alt="{data.person.name}" width="300" height="400">
+            {#if data.person.mugshot}
+                <img class="image" src="https://fdnd.directus.app/assets/{data.person.mugshot}" alt="{data.person.name}" width="300" height="400">
+            {:else}
+                <img class="image" src="/static/vraagtekenimage.jpeg" alt="afbeelding van {data.person.name} niet beschikbaar" width="300" height="400">
+            {/if}
+
 </article>
 
 
@@ -67,7 +73,7 @@
         object-fit: cover;
     }
     
-    h1 {
+    h2 {
         grid-area: naam;
 		font-size: clamp(1.4rem, 9vw, 2.5rem);	
     }
@@ -87,7 +93,7 @@
         margin: 0 0 1.5rem;
     }
 
-    h2 {
+    h3 {
     grid-area: biokop;
     font-weight: bold;
     font-size: clamp(1.4rem, 5vw, 2rem);	    
