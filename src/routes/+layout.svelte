@@ -4,6 +4,7 @@
 	import '../stylesheet.css';
     import Footer from '$lib/components/Footer.svelte'
 
+	import Header from '$lib/components/Header.svelte';
 
 	let { children } = $props();
 </script>
@@ -12,14 +13,7 @@
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
-<header>
-	<div class="header-content">
-		<section>	
-			<a href="/">
-				<h1>Squadpage <span>FDND</span></h1>
-				<h2>Tweedejaars studenten 26/27</h2>
-			</a>
-		</section>
+<Header />
 
 		<!-- ZOEKBALK -->
 		<div class="zoekbalk">
@@ -91,3 +85,4 @@
 		}
 	}
 </style>
+{@render children()}
