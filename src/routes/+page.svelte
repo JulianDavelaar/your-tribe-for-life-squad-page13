@@ -21,6 +21,9 @@
     
 </script>
 
+<svelte:head><title>Hoofdpagina</title></svelte:head>
+
+
 <h3>Sorteren van  
     <!--class:actief={voorwaarde} is Svelte's ingebouwde manier om een class conditioneel toe te voegen -->
     <button class:actief={sorteerVan === 'az'} onclick={() => sorteerVan = 'az'}>A-Z</button>
