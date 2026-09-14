@@ -29,7 +29,12 @@
         <h3>Bio</h3>
             <p>{data.person.bio}</p>
 
-        <img class="image" src="https://fdnd.directus.app/assets/{data.person.mugshot}" alt="{data.person.name}" width="300" height="400">
+            {#if data.person.mugshot}
+                <img class="image" src="https://fdnd.directus.app/assets/{data.person.mugshot}" alt="{data.person.name}" width="300" height="400">
+            {:else}
+                <img class="image" src="/static/vraagtekenimage.jpeg" alt="afbeelding van {data.person.name} niet beschikbaar" width="300" height="400">
+            {/if}
+
 </article>
 
 
