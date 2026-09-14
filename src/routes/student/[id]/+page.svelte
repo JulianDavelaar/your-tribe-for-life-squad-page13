@@ -15,6 +15,7 @@
             <dt>Geboortedatum</dt>
             <dd>{data.person.birthdate}</dd>
             {:else}
+            <dt>Geboortedatum</dt>
             <dd>nog niet geboren</dd>
             {/if}
 
