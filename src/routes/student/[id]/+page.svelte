@@ -38,7 +38,7 @@
         </dl>
 
         <h2>Bio</h2>
-            <p>{data.person.bio}</p>
+            <p>{@html data.person.bio}</p>
 
         <img class="image" src="https://fdnd.directus.app/assets/{data.person.mugshot}" alt="{data.person.name}" width="300" height="400">
 </article>
