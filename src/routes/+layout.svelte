@@ -2,6 +2,8 @@
 	import favicon from '$lib/assets/favicon.svg';
 	import { zoekstatus } from '$lib/search.svelte';
 	import '../stylesheet.css';
+    import Footer from '$lib/components/Footer.svelte'
+
 
 	let { children } = $props();
 </script>
@@ -38,6 +40,8 @@
 
 {@render children()}
 
+<Footer />
+
 <style>
 	header {
         border-bottom: 2px;
@@ -56,7 +60,7 @@
 			text-decoration: none;
 		}
 		h1 {
-			font-family: boldonse;
+			font-family: "boldonse", sans-serif;
 			font-size: clamp(2.4rem, 3.87vw, 7rem);	
 			text-transform: uppercase;
 			margin: 0em;

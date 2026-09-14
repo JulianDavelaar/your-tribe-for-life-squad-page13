@@ -1,0 +1,40 @@
+<footer>
+    <nav>
+        <a href="https://programma.fdnd.nl/" alt="link, programma van opleiding fdnd">Programma</a>
+        <a href="https://fdnd.nl/" alt="FDND website">FDND</a>
+        <a href="https://niveaumatrix.fdnd.nl/" alt="niveaumatrix FDND">niveaumatrix</a>
+    </nav>
+  <h5>Powered by JJL</h5>
+</footer>
+
+<style>
+    footer {
+        background-color: var(--rood);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: .5rem;
+        padding: 1rem 2rem 0;
+        font-family: boldonse, sans-serif;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+
+    }
+
+    a {
+        text-decoration: none;
+        color: var(--creme);
+        font-size: x-large;
+    }
+
+    h5 {
+        background-color: var(--rood);
+        margin: 0;
+        padding: 1rem;
+        font-size: large;
+    }
+</style>

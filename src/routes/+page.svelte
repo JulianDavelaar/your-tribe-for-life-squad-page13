@@ -58,7 +58,7 @@
     }
     h4 {
         font-size: 1.3em;
-        font-family: boldonse;
+        font-family: boldonse, sans-serif;
         text-transform: uppercase;
         &:hover {
             color: var(--rood);
