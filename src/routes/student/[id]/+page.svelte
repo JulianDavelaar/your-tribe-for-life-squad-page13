@@ -15,14 +15,26 @@
             <dt>Geboortedatum</dt>
             <dd>{data.person.birthdate}</dd>
             {:else}
+            <dt>Geboortedatum</dt>
             <dd>nog niet geboren</dd>
             {/if}
 
+            {#if data.person.length}
             <dt>Lengte</dt>
             <dd>{data.person.length} cm</dd>
+            {:else}
+            <dt>Lengte</dt>
+            <dd>N.V.T.</dd>
+            {/if}
 
+            {#if data.person.residency}
             <dt>Woonplaats</dt>
             <dd>{data.person.residency}</dd>
+            {:else}
+            <dt>Woonplaats</dt>
+            <dd>N.V.T.</dd>
+            {/if}
+            
         </dl>
 
         <h2>Bio</h2>
