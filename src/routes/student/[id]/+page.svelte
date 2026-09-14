@@ -7,7 +7,7 @@
 <article>
 
 
-    <h1>{ data.person.name }</h1>
+    <h2>{ data.person.name }</h2>
 
         <dl>
 
@@ -25,7 +25,7 @@
             <dd>{data.person.residency}</dd>
         </dl>
 
-        <h2>Bio</h2>
+        <h3>Bio</h3>
             <p>{data.person.bio}</p>
 
         <img class="image" src="https://fdnd.directus.app/assets/{data.person.mugshot}" alt="{data.person.name}" width="300" height="400">
@@ -67,7 +67,7 @@
         object-fit: cover;
     }
     
-    h1 {
+    h2 {
         grid-area: naam;
 		font-size: clamp(1.4rem, 9vw, 2.5rem);	
     }
@@ -87,7 +87,7 @@
         margin: 0 0 1.5rem;
     }
 
-    h2 {
+    h3 {
     grid-area: biokop;
     font-weight: bold;
     font-size: clamp(1.4rem, 5vw, 2rem);	    
