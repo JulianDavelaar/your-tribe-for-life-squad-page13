@@ -2,8 +2,6 @@
     let {data} = $props()
 </script>
 
-<svelte:head><title>{data.person.name}</title></svelte:head>
-
 <main>
     <div class="pijltje-terug">
         <a href="/">
