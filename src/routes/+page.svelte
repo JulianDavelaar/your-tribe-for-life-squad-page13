@@ -59,6 +59,11 @@
         font-family: boldonse, sans-serif;
         text-transform: uppercase;
     }
+    a {
+        &:hover {
+            color: var(--rood);
+            border-style: none;
+        }
     }
     button {
         background-color: var(--rood);
