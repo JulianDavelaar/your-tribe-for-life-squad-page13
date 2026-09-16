@@ -136,6 +136,7 @@
                 "lijst bio foto";
         }
     }
+
     img {
         grid-area: foto;
         display: block;
@@ -147,3 +148,4 @@
         grid-area: naam;
         font-size: clamp(1.4rem, 9vw, 2.5rem);	
     }
+</style>
