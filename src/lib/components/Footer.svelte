@@ -1,8 +1,8 @@
 <footer>
     <nav>
-        <a href="https://programma.fdnd.nl/" alt="link, programma van opleiding fdnd">Programma</a>
-        <a href="https://fdnd.nl/" alt="FDND website">FDND</a>
-        <a href="https://niveaumatrix.fdnd.nl/" alt="niveaumatrix FDND">Niveaumatrix</a>
+        <a href="https://programma.fdnd.nl/">Programma</a>
+        <a href="https://fdnd.nl/">FDND</a>
+        <a href="https://niveaumatrix.fdnd.nl/">Niveaumatrix</a>
     </nav>
   <h5>Powered by JJL</h5>
 </footer>
