@@ -62,11 +62,12 @@
         font-size: 1.3em;
         font-family: boldonse, sans-serif;
         text-transform: uppercase;
-        &:hover {
-            color: var(--rood);
-            border-style: none;
-        }
     }
+    h4:hover {
+        color: var(--rood);
+        border-style: none;
+    }
+
     button {
         background-color: var(--rood);
         color: var(--wit);
@@ -90,7 +91,6 @@
 
     }
 
-
     .grid {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -102,20 +102,22 @@
         background-color: var(--creme);
         padding: 1rem;
         text-align: center;
-        img {
-            width: 100%;
-            aspect-ratio: 1 / 1;
-            object-fit: cover;
-            border-radius: 8px;
+    }
+    .card img {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        border-radius: 8px;
 
-            animation: fade-in linear;
-            animation-timeline: view();
-            animation-range: entry 0% entry 30%;
-            scroll-behavior: smooth;
-            @media(prefers-reduced-motion: reduce) {
-                animation: none;
-                opacity: 1;
-            }
+        animation: fade-in linear;
+        animation-timeline: view();
+        animation-range: entry 0% entry 30%;
+        scroll-behavior: smooth;
+    }
+    @media (prefers-reduced-motion: reduce) {
+        .card img {
+            animation: none;
+            opacity: 1;
         }
     }
 

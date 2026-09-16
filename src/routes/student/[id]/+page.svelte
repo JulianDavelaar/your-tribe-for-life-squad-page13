@@ -59,27 +59,27 @@
         font-family: boldonse;
         gap: 1rem;
         margin-left: 2rem;
-        p {
-            margin: 0;
-        }
-        a {
-            display: inline-flex;
-            align-items: center;
-            color: var(--zwart);
-            text-decoration: none;
-            gap: 1rem; 
-            &:hover {
-                text-decoration: underline;
-            }
-        }
-        svg {
-            background-color: var(--rood);
-            color: var(--wit);
-            padding: 0.5rem;
-            &:hover {
-                background-color: var(--zwart);
-            }
-        }
+    }
+    .pijltje-terug p {
+        margin: 0;
+    }
+    .pijltje-terug a {
+        display: inline-flex;
+        align-items: center;
+        color: var(--zwart);
+        text-decoration: none;
+        gap: 1rem;
+    }
+    .pijltje-terug a:hover {
+        text-decoration: underline;
+    }
+    .pijltje-terug svg {
+        background-color: var(--rood);
+        color: var(--wit);
+        padding: 0.5rem;
+    }
+    .pijltje-terug svg:hover {
+        background-color: var(--zwart);
     }
     article {
         font-family: boldonse, sans-serif ;
