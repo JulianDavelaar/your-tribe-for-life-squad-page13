@@ -17,19 +17,17 @@
             : b.name.localeCompare(a.name)
         )
     );
-
-    
 </script>
 
-        <h3>Sorteren van  
-            <!--class:actief={voorwaarde} is Svelte's ingebouwde manier om een class conditioneel toe te voegen -->
-            <button class:actief={sorteerVan === 'az'} onclick={() => sorteerVan = 'az'}>A-Z</button>
-            <button class:actief={sorteerVan === 'za'} onclick={() => sorteerVan = 'za'}>Z-A</button>
-        </h3>
+<h3>Sorteren van  
+    <!--class:actief={voorwaarde} is Svelte's ingebouwde manier om een class conditioneel toe te voegen -->
+    <button class:actief={sorteerVan === 'az'} onclick={() => sorteerVan = 'az'}>A-Z</button>
+    <button class:actief={sorteerVan === 'za'} onclick={() => sorteerVan = 'za'}>Z-A</button>
+</h3>
 
-        {#if gefilterdePersonen.length === 0}
-            <p class="geen-resulaten">Geen resultaten gevonden</p>
-        {/if}    
+{#if gefilterdePersonen.length === 0}
+    <p class="geen-resultaten">Geen resultaten gevonden</p>
+{/if}    
 
     <ul class="grid">
         {#each gefilterdePersonen as person}
@@ -50,7 +48,7 @@
         font-weight: 400;
         margin-left: 2.7em;
     }
-    .geen-resulaten {
+    .geen-resultaten {
         font-size: 0.8em;
         font-family: boldonse, sans-serif;
         margin: 3em 0em 0em 5em;
@@ -61,40 +59,34 @@
         font-family: boldonse, sans-serif;
         text-transform: uppercase;
     }
-    h4:hover {
-        color: var(--rood);
-        border-style: none;
     }
-
     button {
         background-color: var(--rood);
         color: var(--wit);
-        padding: 0.5em 1em 0.5em 1em;
+        padding: 0.5em 1em;
         border-style: none;
         font-size: 0.8em;
         cursor: pointer;
         transition: background-color 0.2s ease;
-        
+        &:hover {
+            background-color: var(--zwart);
+        }
     }
-
-    button:hover {
-        background-color: var(--zwart);
-    }
-
     button.actief {
         background-color: var(--zwart);
-        /* horizontal-offset | vertical-offset | blur-radius | spread-radius | color */
-        box-shadow: 2px 4px 8px 2px rgba(0, 0, 0, 0.2);
+        box-shadow: 2px 4px 8px 2px rgba(0, 0, 0, 0.2); /* horizontal-offset | vertical-offset | blur-radius | spread-radius | color */
         transform: scale(1.05);
-
     }
-
     .grid {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
         margin: 0 3em;  
         list-style: none;
         padding: 0;
+    }
+    a {
+        color: var(--zwart);
+        text-decoration: none;
     }
     .card {
         background-color: var(--creme);
@@ -107,19 +99,15 @@
         object-fit: cover;
         border-radius: 8px;
 
-        animation: fade-in linear;
-        animation-timeline: view();
-        animation-range: entry 0% entry 30%;
-        scroll-behavior: smooth;
-    }
-    @media (prefers-reduced-motion: reduce) {
-        .card img {
-            animation: none;
-            opacity: 1;
+        animation: none;
+        opacity:1;
+        @media (prefers-reduced-motion: no-preference) { 
+            animation: fade-in linear;
+            animation-timeline: view();
+            animation-range: entry 0% entry 30%;
+            scroll-behavior: smooth;
         }
     }
-
-    /* animatie op de afbeeldingen studenten */
     @keyframes fade-in {
         from {
             opacity: 0;
@@ -127,9 +115,5 @@
         to {
             opacity: 1;
         }
-    }
-    a {
-        color: var(--zwart);
-        text-decoration: none;
     }
 </style>
