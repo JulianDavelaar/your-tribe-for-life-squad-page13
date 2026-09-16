@@ -2,41 +2,6 @@
     let {data} = $props()
 </script>
 
-<svelte:head><title>{data.person.name}</title></svelte:head>
-
-<article>
-
-
-    <h2>{ data.person.name }</h2>
-
-        <dl>
-
-            {#if data.person.birthdate}
-            <dt>Geboortedatum</dt>
-            <dd>{data.person.birthdate}</dd>
-            {:else}
-            <dt>Geboortedatum</dt>
-            <dd>nog niet geboren</dd>
-            {/if}
-
-            <dt>Lengte</dt>
-            <dd>{data.person.length} cm</dd>
-
-            <dt>Woonplaats</dt>
-            <dd>{data.person.residency}</dd>
-        </dl>
-
-        <h3>Bio</h3>
-            <p>{data.person.bio}</p>
-
-            {#if data.person.mugshot}
-                <img class="image" src="https://fdnd.directus.app/assets/{data.person.mugshot}" alt="{data.person.name}" width="300" height="400">
-            {:else}
-                <img class="image" src="/static/vraagtekenimage.jpeg" alt="afbeelding van {data.person.name} niet beschikbaar" width="300" height="400">
-            {/if}
-
-</article>
-
 <main>
     <div class="pijltje-terug">
         <a href="/">
@@ -81,7 +46,11 @@
             <h2>Bio</h2>
                 <p>{@html data.person.bio}</p>
 
-            <img class="image" src="https://fdnd.directus.app/assets/{data.person.mugshot}" alt="{data.person.name}" width="300" height="400">
+                {#if data.person.mugshot}
+            <img class="image" src="https://fdnd.directus.app/assets/{data.person.mugshot}" alt={data.person.name} width="300" height="400">
+            {:else}
+            <img class="image" src="/spongebob.png" alt="Geen foto van {data.person.name}" width="300" height="400">
+            {/if}
     </article>
 </main>
 
