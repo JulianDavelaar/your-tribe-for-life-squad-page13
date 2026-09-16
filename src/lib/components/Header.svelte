@@ -1,25 +1,40 @@
 <script>
 	import favicon from '$lib/assets/favicon.svg';
 	import { zoekstatus } from '$lib/search.svelte';
-	import '../stylesheet.css';
-    import Footer from '$lib/components/Footer.svelte'
-
 	import Header from '$lib/components/Header.svelte';
 
 	let { children } = $props();
 </script>
 
-<svelte:head>
-	<link rel="icon" href={favicon} />
-</svelte:head>
+<header>
+	<div class="header-content">
+		<section>	
+			<a href="/">
+				<h1>Squadpage <span>FDND</span></h1>
+				<h2>Tweedejaars studenten 26/27</h2>
+			</a>
+		</section>
 
-<Header />
+		<!-- ZOEKBALK -->
+		<div class="zoekbalk">
+			<form role="search">
+				<input
+					type="search"
+					id="zoek"
+					placeholder="Zoek op naam..."
+					bind:value={zoekstatus.term} 
+				/>
+				<!-- bind:value={zoekstatus.term} zegt tegen Svelte: "koppel de waarde van dit invoerveld direct aan mijn variabele zoekstatus.term -->
+			</form>
+		</div>
+	</div>
 
-{@render children()}
+	<hr>
+</header>
 
 <style>
 	header {
-        border-bottom: solid 2px var(--zwart);
+        border-bottom: 2px;
 		margin: 4em 4em 2em 4em;
 		.header-content {
 			display: flex;
@@ -66,4 +81,3 @@
 		}
 	}
 </style>
-<Footer />

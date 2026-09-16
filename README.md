@@ -1,3 +1,7 @@
+# Live Link
+
+[squadpage 2627](https://cerulean-rolypoly-4771c2.netlify.app/)
+
 # sv
 
 Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).

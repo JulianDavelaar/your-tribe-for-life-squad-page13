@@ -29,21 +29,28 @@
     <button class:actief={sorteerVan === 'az'} onclick={() => sorteerVan = 'az'}>A-Z</button>
     <button class:actief={sorteerVan === 'za'} onclick={() => sorteerVan = 'za'}>Z-A</button>
 </h3>
+<main>
+    <h3>Sorteren van  
+        <!--class:actief={voorwaarde} is Svelte's ingebouwde manier om een class conditioneel toe te voegen -->
+        <button class:actief={sorteerVan === 'az'} onclick={() => sorteerVan = 'az'}>A-Z</button>
+        <button class:actief={sorteerVan === 'za'} onclick={() => sorteerVan = 'za'}>Z-A</button>
+    </h3>
 
-{#if gefilterdePersonen.length === 0}
-    <p class="geen-resulaten">Geen resultaten gevonden</p>
-{/if}    
+    {#if gefilterdePersonen.length === 0}
+        <p class="geen-resulaten">Geen resultaten gevonden</p>
+    {/if}    
 
-<ul class="grid">
-    {#each gefilterdePersonen as person}
-        <li class="card">
-            <a href="/student/{person.id}">
-                <h4>{person.name.split(' ')[0]}</h4>
-                 <img src={person.mugshot ? `https://fdnd.directus.app/assets/${person.mugshot}` : '/placeholder.jpg'} alt="{person.name}" />
-            </a>
-        </li>
-    {/each}
-</ul>
+    <ul class="grid">
+        {#each gefilterdePersonen as person}
+            <li class="card">
+                <a href="/student/{person.id}">
+                    <h4>{person.name.split(' ')[0]}</h4>
+                    <img src={person.mugshot ? `https://fdnd.directus.app/assets/${person.mugshot}` : '/placeholder.jpg'} alt="{person.name}">
+                </a>
+            </li>
+        {/each}
+    </ul>
+</main>
 
 <style>
     h3 {
@@ -61,7 +68,7 @@
     }
     h4 {
         font-size: 1.3em;
-        font-family: boldonse;
+        font-family: boldonse, sans-serif;
         text-transform: uppercase;
         &:hover {
             color: var(--rood);
