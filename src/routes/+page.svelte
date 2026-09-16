@@ -29,16 +29,17 @@
     <p class="geen-resultaten">Geen resultaten gevonden</p>
 {/if}    
 
-<ol class="grid">
-    {#each gefilterdePersonen as person}
-        <li class="card">
-            <a href="/student/{person.id}">
-                <h4>{person.name.split(' ')[0]}</h4>
-                <img src={person.mugshot ? `https://fdnd.directus.app/assets/${person.mugshot}?format=auto&width=500` : '/placeholder.jpg'} alt="{person.name}" />
-            </a>
-        </li>
-    {/each}
-</ol>
+    <ul class="grid">
+        {#each gefilterdePersonen as person}
+            <li class="card">
+                <a href="/student/{person.id}">
+                    <h4>{person.name.split(' ')[0]}</h4>
+                    <img src={person.mugshot ? `https://fdnd.directus.app/assets/${person.mugshot}?format=auto&width=500` : '/placeholder.jpg'} alt="{person.name}" 
+                    fetchpriority={high} loading= {i > 7 ? 'lazy' : 'eager'} />
+                </a>
+            </li>
+        {/each}
+    </ul>
 
 <style>
     h3 {
