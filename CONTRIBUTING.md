@@ -8,12 +8,17 @@
 ## Team Canvas
 <img width="845" height="602" alt="Scherm­afbeelding 2026-09-03 om 10 34 54" src="https://github.com/user-attachments/assets/e71cf124-237f-4ec5-a6c0-616aeaadb279" />
 
+## Code Conventies
+-  Duidelijke benamingen voor classes, id's, variables en function namen
+-  kebab-case gebruiken voor classes, css variabelen en ids in HTML en CSS
+-  camelCase gebruiken in Javascript voor JS variabelen en functies.
+
 ## Pull Request
 
 - Gebruikt het pr template
 - Minimaal 1 reviewer
 
-- ## Commits
+## Commits
 
 - Link het aan de juiste issue
 - Geef een duidelijke beschrijving
