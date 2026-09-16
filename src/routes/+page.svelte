@@ -23,12 +23,6 @@
 
 <svelte:head><title>Hoofdpagina</title></svelte:head>
 
-
-<h3>Sorteren van  
-    <!--class:actief={voorwaarde} is Svelte's ingebouwde manier om een class conditioneel toe te voegen -->
-    <button class:actief={sorteerVan === 'az'} onclick={() => sorteerVan = 'az'}>A-Z</button>
-    <button class:actief={sorteerVan === 'za'} onclick={() => sorteerVan = 'za'}>Z-A</button>
-</h3>
 <main>
         <h3>Sorteren van  
             <!--class:actief={voorwaarde} is Svelte's ingebouwde manier om een class conditioneel toe te voegen -->
@@ -51,10 +45,11 @@
         {/each}
     </ul>
 </main>
+
 <style>
     h3 {
         font-family: sans-serif;
-        font-size: 1.5em;   
+        font-size: clamp(1.1rem, 2.87vw, 1.5rem);   
         text-transform: uppercase;
         font-weight: 400;
         margin-left: 2.7em;
