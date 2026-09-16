@@ -33,12 +33,12 @@
         {/if}    
 
     <ul class="grid">
-        {#each gefilterdePersonen as person}
+        {#each gefilterdePersonen as person, i}
             <li class="card">
                 <a href="/student/{person.id}">
                     <h4>{person.name.split(' ')[0]}</h4>
                     <img src={person.mugshot ? `https://fdnd.directus.app/assets/${person.mugshot}?format=auto&width=500` : '/placeholder.jpg'} alt="{person.name}" 
-                    fetchpriority={high} loading= {i > 7 ? 'lazy' : 'eager'} />
+                    fetchpriority="{i > 7 ? 'auto' : 'high'}" loading={i > 7 ? 'lazy' : 'eager'} />
                 </a>
             </li>
         {/each}
