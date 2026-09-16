@@ -2,7 +2,7 @@
     <nav>
         <a href="https://programma.fdnd.nl/" alt="link, programma van opleiding fdnd">Programma</a>
         <a href="https://fdnd.nl/" alt="FDND website">FDND</a>
-        <a href="https://niveaumatrix.fdnd.nl/" alt="niveaumatrix FDND">niveaumatrix</a>
+        <a href="https://niveaumatrix.fdnd.nl/" alt="niveaumatrix FDND">Niveaumatrix</a>
     </nav>
   <h5>Powered by JJL</h5>
 </footer>
@@ -29,12 +29,17 @@
         text-decoration: none;
         color: var(--creme);
         font-size: x-large;
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
 
     h5 {
         background-color: var(--rood);
         margin: 0;
         padding: 1rem;
-        font-size: large;
+        font-size: medium;
+        color: var(--creme);
     }
 </style>
