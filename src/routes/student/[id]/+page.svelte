@@ -16,41 +16,20 @@
     <h1>{ data.person.name }</h1>
 
     <dl>
-        {#if data.person.birthdate}
-            <dt>Geboortedatum</dt>
-            <dd>{data.person.birthdate}</dd>
-        {:else}
-            <dt>Geboortedatum</dt>
-            <dd>nog niet geboren</dd>
-        {/if}
+        <dt>Geboortedatum</dt>
+        <dd>{data.person.birthdate ? `${data.person.birthdate}` : `nog niet geboren`}</dd>
 
+        <dt>Lengte</dt>
+        <dd>{data.person.lenght ? `${data.person.lenght}` : `N.V.T`}</dd>
 
-        {#if data.person.length}
-            <dt>Lengte</dt>
-            <dd>{data.person.length} cm</dd>
-        {:else}
-            <dt>Lengte</dt>
-            <dd>N.V.T.</dd>
-        {/if}
-
-
-        {#if data.person.residency}
-            <dt>Woonplaats</dt>
-            <dd>{data.person.residency}</dd>
-        {:else}
-            <dt>Woonplaats</dt>
-            <dd>N.V.T.</dd>
-        {/if}
+        <dt>Woonplaats</dt>
+        <dd>{data.person.residency ? `${data.person.residency}` : `N.V.T`}</dd>
     </dl>
 
     <h2>Bio</h2>
-    <p>{@html data.person.bio}</p>
+    <p>{@html data.person.bio ? `${data.person.bio}` : `Frontend Design & Development `}</p>
 
-    {#if data.person.mugshot}
-        <img class="image" src="https://fdnd.directus.app/assets/{data.person.mugshot}" alt={data.person.name} width="300" height="400">
-    {:else}
-        <img class="image" src="/spongebob.png" alt="Geen foto van {data.person.name}" width="300" height="400">
-    {/if}
+    <img src={data.person.mugshot ? `https://fdnd.directus.app/assets/${data.person.mugshot}` : `/spongebob.png`} alt="{data.person.name}" width="300" height="400"/>
 </article>
 
 
