@@ -34,6 +34,18 @@
 
 
 <style>
+    h1 {
+        grid-area: naam;
+        font-size: clamp(1.4rem, 9vw, 2rem);	
+        background-color: var(--rood);
+        color: var(--wit);
+        padding: 1rem;
+        justify-self: start;
+        align-self: self-start;
+    }
+    p {
+        margin-right: 4rem;
+    }
     .pijltje-terug {
         font-family: boldonse;
         gap: 1rem;
@@ -85,8 +97,6 @@
         width: 100%;
         aspect-ratio: 3 / 4;
         object-fit: cover;
-    h1 {
-        grid-area: naam;
-        font-size: clamp(1.4rem, 9vw, 2.5rem);	
+        border: 7px solid var(--rood);
     }
 </style>
