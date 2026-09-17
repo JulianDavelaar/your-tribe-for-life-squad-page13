@@ -16,15 +16,14 @@
         gap: .5rem;
         padding: 1rem 2rem 0;
         font-family: boldonse, sans-serif;
+        
     }
-
     nav {
         display: flex;
         justify-content: space-between;
         width: 80%;
 
     }
-
     a {
         text-decoration: none;
         color: var(--creme);
@@ -34,7 +33,6 @@
             text-decoration: underline;
         }
     }
-
     h5 {
         background-color: var(--rood);
         margin: 0;
