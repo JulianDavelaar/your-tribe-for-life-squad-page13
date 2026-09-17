@@ -55,15 +55,10 @@
 
 
 <style>
-
-    
     .pijltje-terug {
         font-family: boldonse;
         gap: 1rem;
         margin-left: 2rem;
-    }
-    .pijltje-terug p {
-        margin: 0;
     }
     .pijltje-terug a {
         display: inline-flex;
@@ -71,49 +66,46 @@
         color: var(--zwart);
         text-decoration: none;
         gap: 1rem;
-    }
-    .pijltje-terug a:hover {
-        text-decoration: underline;
+        &:hover {
+            text-decoration: underline;
+        }
     }
     .pijltje-terug svg {
         background-color: var(--rood);
         color: var(--wit);
         padding: 0.5rem;
-    }
-    .pijltje-terug svg:hover {
-        background-color: var(--zwart);
+        &:hover {
+            background-color: var(--zwart);
+        }
     }
     article {
         font-family: boldonse, sans-serif;
         padding: 1rem;
-        margin-inline: auto;   
-        margin-left: 3rem;
-        margin-right: 3rem;
+        margin-inline: auto; 
+        margin: 3rem; 
         @media (width > 750px) {
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-template-areas: 
-                "naam biokop"
-                "lijst bio"
-                "lijst foto";
+            "naam biokop"
+            "lijst bio"
+            "lijst foto";
         }   
         @media (width > 1150px) {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             grid-template-areas: 
-                "naam biokop foto"
-                "lijst bio foto"
-                "lijst bio foto";
+            "naam biokop foto"
+            "lijst bio foto"
+            "lijst bio foto";
         }
     }
-
     img {
         grid-area: foto;
         display: block;
         width: 100%;
         aspect-ratio: 3 / 4;
         object-fit: cover;
-    }
     h1 {
         grid-area: naam;
         font-size: clamp(1.4rem, 9vw, 2.5rem);	
