@@ -40,7 +40,6 @@
             </li>
         {/each}
     </ul>
-</main>
 
 <style>
     h3 {
